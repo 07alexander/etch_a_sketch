@@ -9,17 +9,21 @@ function makeGrid(rows, cols){
         container.appendChild(cell).className = "grid-item";
     };
 };
-function clearGrid(){
-    var board = container.querySelectorAll("grid-item");
-    for(let i=0;i<board.length; ++i){
-        board[i].style.backgroundColor ="";
-        console.log(board[i]);
-        console.log("hi");
-    }
-}
 
+function clearGrid(){
+    var gridList = container.querySelectorAll('.grid-item');
+    gridList.forEach(function(item){
+        item.style.backgroundColor='white';
+        console.log(item.style.backgroundColor);
+});
+    console.log("CLEARED!")
     
+}
 makeGrid(16,16);
+
+
+
+
 
 
 container.addEventListener("mouseover", function(event){
